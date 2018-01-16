@@ -1,4 +1,8 @@
-version: '0.0.{build}'
+version: '1.0.{build}'
 
 build_script:
-  - cmd: gradlew.bat assemble --info
+  - cmd: |
+      gradlew.bat assemble --info --no-daemon
+
+artifacts:
+  - path: build\exe\main\main.exe
