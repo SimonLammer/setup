@@ -1,0 +1,4 @@
+language: cpp
+script: ./gradlew assemble
+deploy:
+  skip_cleanup: true
