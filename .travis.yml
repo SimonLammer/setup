@@ -1,5 +1,8 @@
 language: cpp
-
-script: ./gradlew assemble --info --no-daemon
+script: "./gradlew assemble --info --no-daemon"
 deploy:
+  provider: releases
+  api_key:
+    secure: ZUahfxKQmUTVUnYzJVI0P//Z8LuQ9vIPD8DnpYCc8Nh8pfkypTb6oUvEVEMdAADgRzhYxXJnTwl7q8KMr0KGUH0vYk/XfSsnsVjUaS5WPUqez6P3mh1vE2d7p/UwwE/+YIgCUeuCGoDz/urQmvo90SCNZJ9+I7WHgv4R3RdKo8xinj8xU3CA3+gXokIr8AXmsGBfKkChC1mG2Ba+IAYAjDbGMpzKz1QLUkxAc6mJpSrGS+FcNBeGjsSyUn97oD5F05w/yp0sOxdJBOiH+Ffwy9Xjde1q2wr428rIXzyVeMQn5peB1/MOvFHwqJ7mRjrYc/YKjmUljZlUdh0/RF/myktElDQcYMsH8ENmpHL10aBgNOsc7Px/BpBif0IMFxmOAxGtNW6ltHsuNhEWZbJ16BJ4WnysiOTujLvMIOduVoCxY6gXxMLauPOfGd83ME+AIR7f8wQP5G27xTiZVjjJ8++9C/y7Bhi73Mk9SWFt37lgWzL0Aq8+ZSZxjbj2sqnbqSHM0+6W0RYKOeXJ9alLeLhm2euCacQ98CMSmJAgwMWjKy7fzZCDrGfmWpK88WAD24ferHLG+gbmAtabhU/28AaVB7gdNstPEJs1MsgmkWWp2CRbNdr1GZNg00DuUINdwtWUMZMhAiGXMAJ7FQHWo3wz+djQLRGhngOtko9m/Co=
+  file: build\exe\main\main
   skip_cleanup: true
