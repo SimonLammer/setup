@@ -7,4 +7,4 @@ deploy:
   file: build\exe\main\main
   skip_cleanup: true
   on:
-    repo: SimonLammer/setup
+    all_branches: true
