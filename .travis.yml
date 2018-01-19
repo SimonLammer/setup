@@ -3,7 +3,7 @@ script: "./gradlew assemble --info --no-daemon"
 before_deploy:
   - git config --global user.email "builds@travis-ci.org"
   - git config --global user.name "Travis CI"
-  - export GIT_TAG=$TRAVIS_BRANCH-$TRAVIS_BUILD_NUMBER
+  - export GIT_TAG=$TRAVIS_BRANCH-v0.$TRAVIS_BUILD_NUMBER
   - git tag $GIT_TAG -a -m "Generated tag by TravisCI build for commit $TRAVIS_COMMIT"
 deploy:
   provider: releases
