@@ -1,5 +1,7 @@
 language: cpp
 script: "./gradlew assemble --info --no-daemon"
+before_deploy:
+  - git status
 deploy:
   provider: releases
   api_key:
